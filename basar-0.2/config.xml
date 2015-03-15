@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sellers max="100" items="80"/>
+    <margins percent="15" reduced="10" fix="2"/>
+    <cakes max="15"/>
+    <!-- Bitte beachten: Nachkommastellen werden mit Punkt abgetrennt, nicht mit Komma! -->
+    <bidding startDate="2015-01-31" startTime="10:00"/>
+    <articleListing endDate="2015-02-21" endTime="15:00"/>
+    <admin user="admin" password="03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"/>
+	<!-- default password:  1234 -->
+</config>

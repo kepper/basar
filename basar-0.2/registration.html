@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div class="row-fluid">
+        <div class="span8">
+            <div class="page-header">
+                <h1>Sortierter Kinder-Sachen Basar Wolfhagen</h1>
+            </div>
+            <div>
+                <p>
+                    Auf dieser Seite kannst Du Dich als Verkäufer/in für den Kinder-Sachen-Basar am <b>8. März 2015</b> 
+                    in der <b>Stadthalle Wolfhagen</b> registrieren. Der Basar ist als sortierter Basar angelegt, d.h.
+                    die Artikel aller Verkäufer/innen werden nach Größen sortiert angeboten. Für Dich bedeutet das, 
+                    dass Du nicht am Stand stehen musst, sondern im Anschluss an den Basar Deine nicht verkauften 
+                    Artikel sowie Deinen Gewinn abholen kannst. Dafür wird ein kleiner Teil Deines Umsatzes als 
+                    Gebühr einbehalten. 
+                </p>
+                <p>
+                    Es gibt Plätze für <b>
+                        <span data-template="config:basar-maxSellers"/>
+                    </b> Verkäufer/innen, die jeweils
+                    <b>
+                        <span data-template="config:basar-itemsPerSeller"/>
+                    </b> Artikel anbieten dürfen. Die Registrierung
+                    ist möglich ab dem <b>
+                        <span data-template="config:basar-registrationStart"/>
+                    </b>. Diese Webseite meldet
+                    automatisch, ob die Registrierung erfolgreich war oder ob bereits alle Plätze vergeben wurden.
+                </p>
+                <p>
+                    Für die Registrierung werden nur ein Name sowie eine E-Mail-Adresse benötigt. Beides wird nur für
+                    die Durchführung des Basars genutzt und nach der Abrechnung gelöscht.
+                </p>
+                <p>
+                    Nach erfolgreicher Registrierung können <a href="artikel.html">hier</a> bis zum 
+                    <b>
+                        <span data-template="config:basar-articleListing"/>
+                    </b> die Artikel angelegt werden. Dazu müssen für 
+                    maximal <b>
+                        <span data-template="config:basar-itemsPerSeller"/>
+                    </b> Artikel jeweils eine kurze Beschreibung
+                    ("rote Winterjacke"), eine Größe ("122") sowie ein Preis angegeben werden. Sobald die Eingabe 
+                    der Artikellisten abgeschlossen ist, werden Etiketten erstellt, die jeder Verkäufer abholen und 
+                    auf den jeweiligen Artikeln vor dem Basar anbringen muss. Nur die Artikel mit diesen Etiketten werden
+                    während des Basars verkauft, da nur mit diesen Etiketten der Preis automatisch erfasst wird.
+                </p>
+                <p>
+                    Die Verkaufsgebühren betragen <b>
+                        <span data-template="config:basar-marginsPercent"/>
+                    </b> des Umsatzes sowie 
+                    einen festen Betrag von <b>
+                        <span data-template="config:basar-marginsFix"/>
+                    </b>. Gegen Spende eines Kuchens 
+                    kann der Anteil am Umsatz auf <b>
+                        <span data-template="config:basar-marginsReduced"/>
+                    </b> gesenkt werden. 
+                    Dies kann während der Registrierung angemeldet werden, allerdings kann nur eine begrenzte Anzahl Kuchen 
+                    angenommen werden. 
+                </p>
+            </div>
+        </div>
+        <div class="span4">
+            <div id="registrationDetails" data-template="config:basar-registration"/>
+        </div>
+    </div>
+    
+    <!-- Modal für neue Verkäufer-->
+    <div id="registrationModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="registrationModalLabel">Zum Verkauf registrieren</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="addNameInput">Name</label>
+                    <div class="controls">
+                        <input type="text" id="addNameInput" placeholder="Name"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="addEmailInput">E-Mail</label>
+                    <div class="controls">
+                        <input type="email" id="addEmailInput" placeholder="E-Mail"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputPassword">Passwort</label>
+                    <div class="controls">
+                        <input type="password" id="inputPassword" placeholder="Passwort"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputPassword2">Passwort (Wiederholung)</label>
+                    <div class="controls">
+                        <input type="password" id="inputPassword2" placeholder="Passwort"/>
+                    </div>
+                </div>
+                <div data-template="config:basar-promiseCake"/>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Abbrechen</button>
+            <button id="createSeller" class="btn btn-primary">Verbindlich zum Verkauf anmelden</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="resources/js/sha256.js"/>
+    <script type="text/javascript" src="resources/js/registration.js"/>
+</div>

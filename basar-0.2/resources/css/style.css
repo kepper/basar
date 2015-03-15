@@ -1,0 +1,254 @@
+/* Application styles could go here */
+table#articleListing input {
+    margin-bottom: 0;
+}
+
+.hero-unit {
+    background-color: #ff83bd;
+    padding: 40px;
+    box-shadow: 0 1px 3px #000000;
+    text-shadow: 0 0 3px #ffffff;
+}
+
+#content {
+    margin-bottom: 80px;
+}
+
+#checkoutContainer td.price {
+    font-weight: bold;
+}
+
+#checkoutContainer td.itemID, #checkoutContainer td.size {
+    font-size: 90%;
+}
+
+#checkoutContainer td.remove {
+    width: 30px;
+}
+
+#checkoutContainer #results {
+    
+}
+
+.sum {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+.count {
+    margin: 20px 0;
+}
+
+@media print {
+
+    @page {
+        margin: 0cm !important;
+        margin-left: 0cm !important;
+        margin-top:0.4cm !important;
+        margin-right: 0cm !important;
+        margin-bottom: 0.4cm !important;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+    
+    .seller {
+        min-height: 10px;
+        page-break-before: always !important;
+        font-size: 8pt;
+        font-family: Arial, sans-serif;
+    }
+    
+    /*.article {
+        width:  6.5cm;
+        height: 3.7cm;
+        float: left;
+        position: relative;
+        left: -0.52cm;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        page-break-inside: avoid;
+        
+    }*/
+    
+    .article {
+        width:  5cm;
+        height: 2.6cm;
+        float: left;
+        position: relative;
+        left: -0.52cm;
+        margin: 0.5cm 1cm;
+        padding: 0;
+        box-sizing: border-box;
+        page-break-inside: avoid;
+        /*border: 3px solid palegoldenrod;*/
+    }
+    
+    .article:nth-child(3n+0) {
+        margin-right: 0;
+    }
+    
+    .article:nth-child(3n+1) {
+        margin-left: 0.5cm;
+    }
+    
+    .article.break {
+        page-break-after: always;
+    }
+    /* --old
+    .article.break + .article {
+        clear: both;
+        page-break-before: always;
+    }*/
+    
+    /*.article .id {
+        position: absolute;
+        top: 0.2em;
+        left: 0.4em;
+    }*/
+    
+    .article .id {
+        position: absolute;
+        top: 0.2em;
+        left: 0.4em;
+        display: none;
+    }
+    
+    .article .size {
+        position: absolute;
+        top: 1.2em;
+        left: 0.2em;
+        width: 2.2em;
+        text-align: right;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    
+    .article .barCode {
+        position: absolute;
+        bottom: 0.2em;
+        margin: 0 auto;
+    }
+    
+    .article .barCode canvas {
+        transform: scale(0.25);
+        width: 4cm;
+        /*transform: scale(0.4);
+        position: relative;
+        top: -1.95cm;
+        left: -2.1cm;*/
+    }
+    
+    .article .desc {
+        position: absolute;
+        top: 0.3em;
+        left: 5.2em;
+        right: 0.2em;
+        font-size: 1em;
+        font-weight: normal;
+        line-height: 1.1em;
+    }
+    
+    .article .price {
+        position: absolute;
+        top: 0.1em;
+        left: 0.2em;
+        width: 3.5em;
+        text-align: right;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+    
+    .article .price:after {
+        content: '€';
+    }   
+    
+    #abrechnungContainer .page {
+        page-break-after: always;
+        font-size: 10pt;
+        font-family: Arial, sans-serif;
+        padding: 1cm;
+        clear: both;
+    }
+    
+    #abrechnungContainer h1 {
+        font-size: 14pt;
+    }
+    
+    #abrechnungContainer h2 {
+        font-size: 12pt;
+    }
+    
+    #abrechnungContainer h1 span {
+        font-size: 10pt;
+        margin-left: 3em;
+    }
+    
+    #abrechnungContainer div {
+        position: relative;
+    }
+    
+    #abrechnungContainer .brutto span, #abrechnungContainer .percent span, #abrechnungContainer .fixed span, #abrechnungContainer .profit span {
+        font-weight: bold;
+        position: absolute;
+        left: 7cm;
+    }
+    
+    #abrechnungContainer .profit {
+        font-weight: bold;
+    }
+    
+    #abrechnungContainer .explain {
+        font-size: 7pt;
+    }
+    
+    #abrechnungContainer .payment {
+        text-decoration: underline;
+    }
+    
+    #abrechnungContainer table {
+        font-size: 5pt;
+        float: left;
+        width: 9cm;
+        border-collapse: collapse;
+        line-height: 1.2em;
+    }
+    
+    #abrechnungContainer table.table2 {
+        margin-left: 2.5em;
+        border-left: 0.1pt solid #000000;
+    }
+    
+    #abrechnungContainer table.table2 tr td:first-child {
+        padding-left: 2.5em;
+    }
+    
+    #abrechnungContainer table tr {
+        padding: 0;
+        margin: 0;
+        vertical-align: top;
+    }
+    
+    #abrechnungContainer table tr.sold {
+        font-weight: bold;
+    }
+    
+    #abrechnungContainer table td {
+        padding: 0 3em 0.3em 0;
+        vertical-align: top;
+    }
+}
