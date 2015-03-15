@@ -61,7 +61,7 @@ let $objects := for $article in $items
 (:let $filename := concat(replace($name,'\s',''),'.xml')
 let $doc := <seller xml:id="{$id}" name="{$name}" mail="{$mail}" cake="{$cake}" password="{$pass}"/>
 :)
-(:let $login := xmldb:login('/db/apps/basar/data/sellers', 'admin', 'ehsittal')
+(:let $login := xmldb:login('/db/apps/basar/data/sellers', 'admin', '')
 let $exists := doc-available(concat('/db/apps/basar/data/sellers/',$filename))
 
 let $store := if($exists) then() else(xmldb:store('/db/apps/basar/data/sellers', $filename, $doc))

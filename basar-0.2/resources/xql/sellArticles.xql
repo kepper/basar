@@ -26,7 +26,7 @@ let $done := for $item in $items
 
 let $protocol.id := concat('sell_',replace(replace(string(current-dateTime()),':','_'),'\+','-'))
 let $protocol := <sell xml:id="{$protocol.id}" when="{current-dateTime()}" sum="{sum($items/@price)}" articles="{count($itemIDs)}">{$inputString}</sell>
-let $login := xmldb:login('/db/apps/basar/data/sellers', 'admin', 'ehsittal')
+let $login := xmldb:login('/db/apps/basar/data/sellers', 'admin', '')
 let $verkauf := xmldb:store('/db/apps/basar/data/sells', $protocol.id || '.xml', $protocol)
 
 return 
