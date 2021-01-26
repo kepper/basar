@@ -1,0 +1,11 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title level="a" xml:lang="es">San Nicolas de Tumbez</title>
+                    <title level="m" xml:lang="en">New title</title>
+                    <title level="m" xml:lang="en">New title2</title>
+                </titleStmt>
+            </fileDesc>
+        </teiHeader>
+    </TEI>
